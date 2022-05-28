@@ -1,0 +1,148 @@
+.header {
+  height: 50px;
+  background-color: #00cc66;
+}
+
+.header__container {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  background-image: url("../image/logo-22.png");
+  background-repeat: no-repeat;
+  height: 40px;
+  background-size: contain;
+  width: 200px;
+}
+
+.header__search {
+  background-color: #fff;
+  height: 30px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header__search--input {
+  border: none;
+  width: 300px;
+  font-size: 14px;
+}
+
+.header__search--input:focus {
+  outline: none;
+}
+
+.header__user {
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  gap: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.header__item {
+  position: absolute;
+  left: -70px;
+  background-color: aquamarine;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  display: none;
+}
+
+#account:hover .header__item {
+  display: flex;
+}
+
+.header__item--button {
+  height: 50px;
+  background-color: #3a5897;
+  cursor: pointer;
+}
+
+.facebook--button {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.facebook--button i {
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a4481;
+}
+
+.facebook--button span {
+  text-align: center;
+  width: 100%;
+}
+
+.login--button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffc107;
+}
+
+.header__item-newAccount {
+  color: #000;
+  font-size: 13px;
+}
+
+.header__item-newAccount a {
+  color: #00cc66 !important;
+}
+
+.header__user--item {
+  position: relative;
+}
+
+.header__user--item:hover .header__cart {
+  display: flex;
+}
+
+.header__cart {
+  position: absolute;
+  background-color: aquamarine;
+  display: none;
+  flex-direction: column;
+  width: 150px;
+  padding: 10px;
+  gap: 20px;
+}
+
+.header__cart--title {
+  padding: 0 10px;
+  color: #000;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.header__cart--title::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+}
+
+.header__cart--button {
+  background-color: #ffc107;
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  gap: 10px;
+  font-size: 14px;
+}

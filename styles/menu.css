@@ -1,0 +1,133 @@
+.menu__container {
+  display: flex !important;
+}
+
+.menu__dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.menu__dropdown--item {
+  height: 50px;
+  /* background-color: #00cc66; */
+  display: flex;
+  align-items: center;
+  transition: 0.4s linear;
+  color: #000;
+  position: relative;
+}
+
+.menu__dropdown--item.active {
+  font-weight: 600;
+}
+
+.menu__dropdown--item span {
+  color: inherit;
+}
+
+.menu__dropdown--item:hover {
+  background-color: #00cc66;
+}
+
+.menu__dropdown--item:hover span {
+  animation: slide 1s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+.menu__dropdown--child {
+  background-color: #fff;
+  z-index: 10;
+  width: 200px;
+  position: absolute;
+  right: -200px;
+  display: none;
+  flex-direction: column;
+  height: 150px;
+  top: 0;
+  gap: 5px;
+  padding-left: 20px;
+}
+
+.menu__dropdown--item:hover .menu__dropdown--child {
+  display: flex;
+}
+
+.menu__dropdown--item:hover .menu__dropdown--child::after {
+  display: block;
+}
+
+.menu__dropdown--child::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background-color: #00cc66;
+  display: none;
+}
+
+.dropdown__child--item {
+  font-weight: 400;
+}
+
+.dropdown__child--item:hover {
+  color: #00cc66 !important;
+}
+
+.menu__slider {
+  width: 70%;
+  margin-left: 10px;
+  height: 150px;
+  position: relative;
+  color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.slider__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  cursor: pointer;
+  color: #fff;
+}
+
+#btn-left {
+  left: 10px;
+  top: calc(50% - 20px);
+}
+
+#btn-right {
+  right: 10px;
+  top: calc(50% - 20px);
+}
+
+.slider__dot {
+  width: 40px;
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 20px);
+  color: #f2f2f2;
+}
+
+.slider__dot .active {
+  color: #00cc66;
+}

@@ -1,0 +1,44 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__category {
+  background-color: #f2f2f2;
+}
+
+.menu__category--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+}
+
+.menu__category--item {
+  display: flex;
+  align-items: center;
+}
+
+.category {
+  background-color: #fff;
+  height: 100%;
+  gap: 10px;
+  padding: 0 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000 !important;
+}
+
+.category span {
+  color: inherit;
+}
+
+.contact {
+  gap: 10px;
+  font-weight: 600;
+}
+
+.contact i,
+span {
+  color: #00cc66;
+}
